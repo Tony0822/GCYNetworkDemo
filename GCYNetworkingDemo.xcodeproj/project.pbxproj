@@ -16,6 +16,8 @@
 		3E818DE82090935A00AFDC8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818DE72090935A00AFDC8E /* main.m */; };
 		3E818DF22090935A00AFDC8E /* GCYNetworkingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818DF12090935A00AFDC8E /* GCYNetworkingDemoTests.m */; };
 		3E818DFD2090935A00AFDC8E /* GCYNetworkingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818DFC2090935A00AFDC8E /* GCYNetworkingDemoUITests.m */; };
+		3E818E0F209094BB00AFDC8E /* GCYNetworkingConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E0B209094BB00AFDC8E /* GCYNetworkingConfigure.m */; };
+		3E818E10209094BB00AFDC8E /* GCYNetworkingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E0D209094BB00AFDC8E /* GCYNetworkingBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		3E818DF82090935A00AFDC8E /* GCYNetworkingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCYNetworkingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E818DFC2090935A00AFDC8E /* GCYNetworkingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingDemoUITests.m; sourceTree = "<group>"; };
 		3E818DFE2090935A00AFDC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E818E0B209094BB00AFDC8E /* GCYNetworkingConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingConfigure.m; sourceTree = "<group>"; };
+		3E818E0C209094BB00AFDC8E /* GCYNetworkingBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingBase.h; sourceTree = "<group>"; };
+		3E818E0D209094BB00AFDC8E /* GCYNetworkingBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingBase.m; sourceTree = "<group>"; };
+		3E818E0E209094BB00AFDC8E /* GCYNetworkingConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingConfigure.h; sourceTree = "<group>"; };
 		7CC1EEA349225FC9F942DF70 /* Pods-GCYNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCYNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCYNetworkingDemo/Pods-GCYNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B0197F06C127F4BB557C9FCE /* libPods-GCYNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCYNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +114,7 @@
 		3E818DD72090935800AFDC8E /* GCYNetworkingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3E818E0A209094A100AFDC8E /* Networking */,
 				3E818DD82090935800AFDC8E /* AppDelegate.h */,
 				3E818DD92090935800AFDC8E /* AppDelegate.m */,
 				3E818DDB2090935800AFDC8E /* ViewController.h */,
@@ -137,6 +144,17 @@
 				3E818DFE2090935A00AFDC8E /* Info.plist */,
 			);
 			path = GCYNetworkingDemoUITests;
+			sourceTree = "<group>";
+		};
+		3E818E0A209094A100AFDC8E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3E818E0C209094BB00AFDC8E /* GCYNetworkingBase.h */,
+				3E818E0D209094BB00AFDC8E /* GCYNetworkingBase.m */,
+				3E818E0E209094BB00AFDC8E /* GCYNetworkingConfigure.h */,
+				3E818E0B209094BB00AFDC8E /* GCYNetworkingConfigure.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		5221DEE020A1AC331B3CE76A /* Pods */ = {
@@ -308,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E818E10209094BB00AFDC8E /* GCYNetworkingBase.m in Sources */,
+				3E818E0F209094BB00AFDC8E /* GCYNetworkingConfigure.m in Sources */,
 				3E818DDD2090935800AFDC8E /* ViewController.m in Sources */,
 				3E818DE82090935A00AFDC8E /* main.m in Sources */,
 				3E818DDA2090935800AFDC8E /* AppDelegate.m in Sources */,
@@ -483,7 +503,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z899C473MY;
 				INFOPLIST_FILE = GCYNetworkingDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TonyYang.GCYNetworkingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,7 +521,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z899C473MY;
 				INFOPLIST_FILE = GCYNetworkingDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TonyYang.GCYNetworkingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,7 +538,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z899C473MY;
 				INFOPLIST_FILE = GCYNetworkingDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TonyYang.GCYNetworkingDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,7 +557,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z899C473MY;
 				INFOPLIST_FILE = GCYNetworkingDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TonyYang.GCYNetworkingDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -541,7 +575,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z899C473MY;
 				INFOPLIST_FILE = GCYNetworkingDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TonyYang.GCYNetworkingDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,7 +593,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z899C473MY;
 				INFOPLIST_FILE = GCYNetworkingDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TonyYang.GCYNetworkingDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
