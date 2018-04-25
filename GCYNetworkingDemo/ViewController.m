@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GCYTestOneTask.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
+    [self createTestOneTask];
+
+}
+- (void)createTestOneTask {
+    [[GCYTestOneTask sharedInstance] get:@"Tony0822" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

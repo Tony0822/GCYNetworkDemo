@@ -1,12 +1,13 @@
 //
 //  GCYNetworkingBase.h
-//  GCYProjectDemo
+//  GCYNetworkingDemo
 //
-//  Created by gaochongyang on 2018/4/24.
-//  Copyright © 2018年 TonyYang. All rights reserved.
+//  Created by gaochongyang on 2018/4/25.
+//  Copyright © 2018年 gaochongyang. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
 #import <AFNetworking.h>
 #import "GCYNetworkingConfigure.h"
 
@@ -21,7 +22,9 @@ typedef void (^SuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 typedef void (^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 typedef void (^NoticeBlock)(NSURLSessionDataTask *task, id responseObject);
 
+
 @interface GCYNetworkingBase : NSObject
+
 @property (nonatomic, strong) GCYNetworkingConfigure *apiConfigure;
 @property (nonatomic, strong) AFHTTPSessionManager *requestManager;
 @property (nonatomic, strong) AFHTTPSessionManager *otherRequestManager;

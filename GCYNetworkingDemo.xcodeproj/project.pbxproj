@@ -16,8 +16,11 @@
 		3E818DE82090935A00AFDC8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818DE72090935A00AFDC8E /* main.m */; };
 		3E818DF22090935A00AFDC8E /* GCYNetworkingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818DF12090935A00AFDC8E /* GCYNetworkingDemoTests.m */; };
 		3E818DFD2090935A00AFDC8E /* GCYNetworkingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818DFC2090935A00AFDC8E /* GCYNetworkingDemoUITests.m */; };
-		3E818E0F209094BB00AFDC8E /* GCYNetworkingConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E0B209094BB00AFDC8E /* GCYNetworkingConfigure.m */; };
-		3E818E10209094BB00AFDC8E /* GCYNetworkingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E0D209094BB00AFDC8E /* GCYNetworkingBase.m */; };
+		3E818E14209096B500AFDC8E /* GCYTestOneTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E13209096B500AFDC8E /* GCYTestOneTask.m */; };
+		3E818E17209097FB00AFDC8E /* GCYNetworkingConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E16209097FB00AFDC8E /* GCYNetworkingConfigure.m */; };
+		3E818E1A2090985700AFDC8E /* GCYNetworkingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E192090985700AFDC8E /* GCYNetworkingBase.m */; };
+		3E818E1C20909C1E00AFDC8E /* GWConfigFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E818E1B20909C1E00AFDC8E /* GWConfigFile.plist */; };
+		3E818E202090A1E400AFDC8E /* GCYConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818E1F2090A1E400AFDC8E /* GCYConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +58,15 @@
 		3E818DF82090935A00AFDC8E /* GCYNetworkingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCYNetworkingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E818DFC2090935A00AFDC8E /* GCYNetworkingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingDemoUITests.m; sourceTree = "<group>"; };
 		3E818DFE2090935A00AFDC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E818E0B209094BB00AFDC8E /* GCYNetworkingConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingConfigure.m; sourceTree = "<group>"; };
-		3E818E0C209094BB00AFDC8E /* GCYNetworkingBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingBase.h; sourceTree = "<group>"; };
-		3E818E0D209094BB00AFDC8E /* GCYNetworkingBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingBase.m; sourceTree = "<group>"; };
-		3E818E0E209094BB00AFDC8E /* GCYNetworkingConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingConfigure.h; sourceTree = "<group>"; };
+		3E818E12209096B500AFDC8E /* GCYTestOneTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYTestOneTask.h; sourceTree = "<group>"; };
+		3E818E13209096B500AFDC8E /* GCYTestOneTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYTestOneTask.m; sourceTree = "<group>"; };
+		3E818E15209097FB00AFDC8E /* GCYNetworkingConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingConfigure.h; sourceTree = "<group>"; };
+		3E818E16209097FB00AFDC8E /* GCYNetworkingConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingConfigure.m; sourceTree = "<group>"; };
+		3E818E182090985700AFDC8E /* GCYNetworkingBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingBase.h; sourceTree = "<group>"; };
+		3E818E192090985700AFDC8E /* GCYNetworkingBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingBase.m; sourceTree = "<group>"; };
+		3E818E1B20909C1E00AFDC8E /* GWConfigFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GWConfigFile.plist; sourceTree = "<group>"; };
+		3E818E1E2090A1E400AFDC8E /* GCYConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYConfig.h; sourceTree = "<group>"; };
+		3E818E1F2090A1E400AFDC8E /* GCYConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYConfig.m; sourceTree = "<group>"; };
 		7CC1EEA349225FC9F942DF70 /* Pods-GCYNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCYNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCYNetworkingDemo/Pods-GCYNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B0197F06C127F4BB557C9FCE /* libPods-GCYNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCYNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,7 +122,8 @@
 		3E818DD72090935800AFDC8E /* GCYNetworkingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3E818E0A209094A100AFDC8E /* Networking */,
+				3E818E112090963C00AFDC8E /* Networking */,
+				3E818E0A209094A100AFDC8E /* BaseNetworking */,
 				3E818DD82090935800AFDC8E /* AppDelegate.h */,
 				3E818DD92090935800AFDC8E /* AppDelegate.m */,
 				3E818DDB2090935800AFDC8E /* ViewController.h */,
@@ -146,15 +155,35 @@
 			path = GCYNetworkingDemoUITests;
 			sourceTree = "<group>";
 		};
-		3E818E0A209094A100AFDC8E /* Networking */ = {
+		3E818E0A209094A100AFDC8E /* BaseNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				3E818E0C209094BB00AFDC8E /* GCYNetworkingBase.h */,
-				3E818E0D209094BB00AFDC8E /* GCYNetworkingBase.m */,
-				3E818E0E209094BB00AFDC8E /* GCYNetworkingConfigure.h */,
-				3E818E0B209094BB00AFDC8E /* GCYNetworkingConfigure.m */,
+				3E818E1D20909C6A00AFDC8E /* GCYConfig */,
+				3E818E15209097FB00AFDC8E /* GCYNetworkingConfigure.h */,
+				3E818E16209097FB00AFDC8E /* GCYNetworkingConfigure.m */,
+				3E818E182090985700AFDC8E /* GCYNetworkingBase.h */,
+				3E818E192090985700AFDC8E /* GCYNetworkingBase.m */,
+			);
+			path = BaseNetworking;
+			sourceTree = "<group>";
+		};
+		3E818E112090963C00AFDC8E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3E818E12209096B500AFDC8E /* GCYTestOneTask.h */,
+				3E818E13209096B500AFDC8E /* GCYTestOneTask.m */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		3E818E1D20909C6A00AFDC8E /* GCYConfig */ = {
+			isa = PBXGroup;
+			children = (
+				3E818E1B20909C1E00AFDC8E /* GWConfigFile.plist */,
+				3E818E1E2090A1E400AFDC8E /* GCYConfig.h */,
+				3E818E1F2090A1E400AFDC8E /* GCYConfig.m */,
+			);
+			path = GCYConfig;
 			sourceTree = "<group>";
 		};
 		5221DEE020A1AC331B3CE76A /* Pods */ = {
@@ -278,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E818E1C20909C1E00AFDC8E /* GWConfigFile.plist in Resources */,
 				3E818DE52090935A00AFDC8E /* LaunchScreen.storyboard in Resources */,
 				3E818DE22090935A00AFDC8E /* Assets.xcassets in Resources */,
 				3E818DE02090935800AFDC8E /* Main.storyboard in Resources */,
@@ -326,10 +356,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E818E10209094BB00AFDC8E /* GCYNetworkingBase.m in Sources */,
-				3E818E0F209094BB00AFDC8E /* GCYNetworkingConfigure.m in Sources */,
+				3E818E1A2090985700AFDC8E /* GCYNetworkingBase.m in Sources */,
 				3E818DDD2090935800AFDC8E /* ViewController.m in Sources */,
+				3E818E17209097FB00AFDC8E /* GCYNetworkingConfigure.m in Sources */,
+				3E818E14209096B500AFDC8E /* GCYTestOneTask.m in Sources */,
 				3E818DE82090935A00AFDC8E /* main.m in Sources */,
+				3E818E202090A1E400AFDC8E /* GCYConfig.m in Sources */,
 				3E818DDA2090935800AFDC8E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

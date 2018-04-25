@@ -1,9 +1,9 @@
 //
 //  GCYNetworkingBase.m
-//  GCYProjectDemo
+//  GCYNetworkingDemo
 //
-//  Created by gaochongyang on 2018/4/24.
-//  Copyright © 2018年 TonyYang. All rights reserved.
+//  Created by gaochongyang on 2018/4/25.
+//  Copyright © 2018年 gaochongyang. All rights reserved.
 //
 
 #import "GCYNetworkingBase.h"
@@ -12,8 +12,8 @@
 
 @end
 
-@implementation GCYNetworkingBase
 
+@implementation GCYNetworkingBase
 - (id)requestNetworkingConfigure:(GCYNetworkingConfigure *)configure
                          succsee:(SuccessBlock)success
                           notice:(NoticeBlock)notice
@@ -78,14 +78,14 @@
     }
     return nil;
 }
-    
+
 - (void)cancelAllRequest {
     [self.requestManager.operationQueue cancelAllOperations];
     [self.otherRequestManager.operationQueue cancelAllOperations];
 }
 
 #pragma mark -- private
-    
+
 - (id)GET:(NSString *)URLString
 parameters:(NSDictionary *)parameters
   success:(SuccessBlock)success
@@ -95,17 +95,17 @@ parameters:(NSDictionary *)parameters
     return [self.requestManager GET:URLString
                          parameters:[self __finalParametersWithParams:parameters]
                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [self processSuccessTask:task
-                  responseObject:responseObject
-                         success:success
-                          notice:notice
-                         failure:failure];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [self processFailureTask:task
-                           error:error
-                          notice:notice
-                         failure:failure];
-    }];
+                                [self processSuccessTask:task
+                                          responseObject:responseObject
+                                                 success:success
+                                                  notice:notice
+                                                 failure:failure];
+                            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                [self processFailureTask:task
+                                                   error:error
+                                                  notice:notice
+                                                 failure:failure];
+                            }];
 }
 - (id)OTHERGET:(NSString *)URLString
     paramaters:(NSDictionary *)paramaters
@@ -120,12 +120,12 @@ parameters:(NSDictionary *)parameters
             self.otherRequestManager.requestSerializer = [[AFHTTPRequestSerializer alloc] init];
         }
             break;
-            case GCYAFNetworkingRequestTypeJson:
+        case GCYAFNetworkingRequestTypeJson:
         {
             self.otherRequestManager.requestSerializer = [[AFJSONRequestSerializer alloc] init];
         }
             break;
-            case GCYAFNetworkingRequestTypeImage:
+        case GCYAFNetworkingRequestTypeImage:
         {
             self.otherRequestManager.responseSerializer = [[AFImageResponseSerializer alloc] init];
         }
@@ -181,11 +181,11 @@ parameters:(NSDictionary *)parameters
 }
 
 - (id)OTHERPOST:(NSString *)URLString
-parameters:(NSDictionary *)parameters
-     requestType:(GCYAFNetworkingRequestType)requestType
-   success:(SuccessBlock)success
-    notice:(NoticeBlock)notice
-   failure:(FailureBlock)failure {
+     parameters:(NSDictionary *)parameters
+    requestType:(GCYAFNetworkingRequestType)requestType
+        success:(SuccessBlock)success
+         notice:(NoticeBlock)notice
+        failure:(FailureBlock)failure {
     
     switch (requestType) {
         case GCYAFNetworkingRequestTypeHttp:
@@ -225,10 +225,10 @@ parameters:(NSDictionary *)parameters
 }
 
 - (id)NOJSONPOST:(NSString *)URLString
-parameters:(NSDictionary *)parameters
-   success:(SuccessBlock)success
-    notice:(NoticeBlock)notice
-   failure:(FailureBlock)failure {
+      parameters:(NSDictionary *)parameters
+         success:(SuccessBlock)success
+          notice:(NoticeBlock)notice
+         failure:(FailureBlock)failure {
     
     return [self.noJsonRequestManager POST:URLString
                                 parameters:[self __finalParametersWithParams:parameters]
@@ -243,28 +243,28 @@ parameters:(NSDictionary *)parameters
 }
 
 - (id)NOJSONGET:(NSString *)URLString
-parameters:(NSDictionary *)parameters
-   success:(SuccessBlock)success
-    notice:(NoticeBlock)notice
-   failure:(FailureBlock)failure {
+     parameters:(NSDictionary *)parameters
+        success:(SuccessBlock)success
+         notice:(NoticeBlock)notice
+        failure:(FailureBlock)failure {
     
-   return [self.noJsonRequestManager GET:URLString
-                              parameters:[self __finalParametersWithParams:parameters]
-                                 success:success
-                                 failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                     [self processFailureTask:task
-                                                        error:error
-                                                       notice:notice
-                                                      failure:failure];
-                                 }];
+    return [self.noJsonRequestManager GET:URLString
+                               parameters:[self __finalParametersWithParams:parameters]
+                                  success:success
+                                  failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                      [self processFailureTask:task
+                                                         error:error
+                                                        notice:notice
+                                                       failure:failure];
+                                  }];
     
 }
 
 - (id)PUT:(NSString *)URLString
 parameters:(NSDictionary *)parameters
-   success:(SuccessBlock)success
-    notice:(NoticeBlock)notice
-   failure:(FailureBlock)failure {
+  success:(SuccessBlock)success
+   notice:(NoticeBlock)notice
+  failure:(FailureBlock)failure {
     
     return [self.requestManager PUT:URLString
                          parameters:[self __finalParametersWithParams:parameters]
@@ -283,10 +283,10 @@ parameters:(NSDictionary *)parameters
 }
 
 - (id)DELETE:(NSString *)URLString
-parameters:(NSDictionary *)parameters
-   success:(SuccessBlock)success
-    notice:(NoticeBlock)notice
-   failure:(FailureBlock)failure {
+  parameters:(NSDictionary *)parameters
+     success:(SuccessBlock)success
+      notice:(NoticeBlock)notice
+     failure:(FailureBlock)failure {
     
     return [self.requestManager DELETE:URLString
                             parameters:[self __finalParametersWithParams:parameters]
@@ -343,9 +343,9 @@ parameters:(NSDictionary *)parameters
 }
 // 根据业务逻辑处理请求失败返回的数据
 - (void)processFailureTask:(NSURLSessionDataTask *)task
-                      error:(NSError *)error
-                     notice:(NoticeBlock)notice
-                    failure:(FailureBlock)failure {
+                     error:(NSError *)error
+                    notice:(NoticeBlock)notice
+                   failure:(FailureBlock)failure {
     if (failure) {
         failure(task, error);
     }
