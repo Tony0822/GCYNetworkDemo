@@ -24,10 +24,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-//        self.requestManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[[GCYConfig shareInstance] getURLString]]];
+        self.requestManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[[GCYConfig shareInstance] getURLString]]];
         
-        self.requestManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://github.com"]];
-
         self.requestManager.requestSerializer.timeoutInterval = kAPITimeOut;
         self.requestManager.responseSerializer = [AFJSONResponseSerializer serializer];
         self.requestManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];

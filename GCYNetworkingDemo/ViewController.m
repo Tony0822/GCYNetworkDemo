@@ -22,7 +22,7 @@
 
 }
 - (void)createTestOneTask {
-    [[GCYTestOneTask sharedInstance] get:@"Tony0822" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[GCYTestOneTask sharedInstance] get:@"GCYBase" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
