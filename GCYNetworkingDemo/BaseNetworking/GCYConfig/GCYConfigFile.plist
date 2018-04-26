@@ -8,31 +8,31 @@
 			<key>Title</key>
 			<string>正式环境</string>
 			<key>BaseURL</key>
-			<string>http://gptbs.gewara.com/gptbs/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>测试test</string>
 			<key>BaseURL</key>
-			<string>http://test.gewala.net/gptbs/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>预发环境</string>
 			<key>BaseURL</key>
-			<string>http://114.80.171.245:13080/gptbs/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>测试137</string>
 			<key>BaseURL</key>
-			<string>https://pi.gewara.com/gptbs/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>DEV</string>
 			<key>BaseURL</key>
-			<string>http://192.168.12.143:25080/gptbs/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 	</array>
 	<key>Test2</key>
@@ -41,13 +41,13 @@
 			<key>Title</key>
 			<string>正式环境</string>
 			<key>BaseURL</key>
-			<string>https://b2bmsa.show.wepiao.com/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>开发环境</string>
 			<key>BaseURL</key>
-			<string>http://b2bmsa-dev-develop.showbiz.wepiao.com/</string>
+			<string>http://github.com/Tony0822</string>
 		</dict>
 	</array>
 </dict>

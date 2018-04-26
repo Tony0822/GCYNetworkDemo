@@ -26,7 +26,7 @@
     dispatch_once(&onceToken, ^{
         if (!appConfig) {
             appConfig = [[GCYConfig alloc] init];
-            appConfig.apiDic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GWConfigFile" ofType:@"plist"]];
+            appConfig.apiDic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GCYConfigFile" ofType:@"plist"]];
         }
     });
     return appConfig;
